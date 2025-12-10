@@ -1,0 +1,46 @@
+.shimmer-button {
+  position: relative;
+  overflow: hidden;
+  /* Inner glow (inner shadow) - white at 12% opacity with 6px blur */
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.12);
+  /* Subtle 1px white stroke at 10% opacity */
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.shimmer-button-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: inherit;
+}
+
+.shimmer-overlay {
+  position: absolute;
+  top: -20%; /* 140% tall, centered */
+  left: -125%; /* Start off-screen to the left */
+  width: 250%;
+  height: 140%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.28) 50%,
+    transparent 100%
+  );
+  transform: rotate(30deg);
+  filter: blur(6px);
+  mix-blend-mode: screen;
+  z-index: 1;
+  pointer-events: none;
+  animation: shimmer 1.8s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -125%;
+  }
+  100% {
+    left: 125%;
+  }
+}

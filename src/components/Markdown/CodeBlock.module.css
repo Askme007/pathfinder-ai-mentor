@@ -1,0 +1,85 @@
+/* Code Block Styles - Scoped CSS Module */
+
+.code-block {
+  margin: 20px 0;
+  background: #0B1220;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.code-language {
+  font-size: 13px;
+  font-weight: 600;
+  color: #A0A0A0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.copy-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: transparent;
+  color: #D1D1D1;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.copy-button:hover {
+  background: #232323;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.copy-button:focus {
+  outline: 2px solid #5B9FFF;
+  outline-offset: 2px;
+}
+
+.copy-button.copied {
+  color: #4CAF50;
+  border-color: rgba(76, 175, 80, 0.3);
+}
+
+.copy-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.code-content {
+  overflow-x: auto;
+  padding: 18px;
+}
+
+.code-pre {
+  margin: 0;
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #F7F7F7;
+}
+
+.code-pre code {
+  display: block;
+  white-space: pre;
+  word-wrap: normal;
+  font-family: inherit;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
